@@ -1,4 +1,4 @@
-# Project Name: Workopia
+# Project Name: Job Board
 ## Description: 
 A job listing website where users can view job ads, post job ads, and apply for jobs. 
 
