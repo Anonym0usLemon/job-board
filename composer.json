@@ -1,0 +1,16 @@
+{
+  "name": "anonym0uslemon/job_board",
+  "description": "Job listing application",
+  "authors":[
+    {
+      "name": "Dominic DiModugno",
+      "email": "ddimodugno@outlook.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Framework\\": "Framework/",
+      "App\\": "App/"
+    }
+  }
+}
