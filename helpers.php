@@ -47,7 +47,7 @@ function loadPartial($name) {
 /**
  * Preformat text - will inspect a value(s)
  * 
- * @param mixed $value
+ * @param string $value
  * @return void
  */
 function pr($value) {
@@ -58,7 +58,8 @@ function pr($value) {
 
 /**
  * Preformat text and exit
- * @param mixed $value
+ * 
+ * @param string $value
  * @return void
  */
 function pre($value) {
@@ -71,7 +72,7 @@ function pre($value) {
 /**
  * Format salary
  * 
- * @param mixed $salary
+ * @param string $salary
  * @return string
  */
 function formatSalary($salary) {
