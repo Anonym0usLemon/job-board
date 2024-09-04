@@ -4,7 +4,8 @@ namespace Framework;
 
 use PDO;
 
-class Database {
+class Database
+{
   public $conn;
 
   /**
@@ -12,7 +13,7 @@ class Database {
    * 
    * @param array $config - Host, port, database name, etc
    */
-  public function __construct($config) 
+  public function __construct($config)
   {
     $dsn = "mysql:host={$config['host']};post={$config['port']};dbname={$config['dbname']}";
 
@@ -35,13 +36,13 @@ class Database {
    * @throws Exception
    * @return PDOStatement
    */
-  public function query($query, $params) 
-  { 
+  public function query($query, $params)
+  {
     try {
-      $statement = $this->conn->prepare($query); 
+      $statement = $this->conn->prepare($query);
 
       // Bind named params
-      foreach($params as $param => $value) {
+      foreach ($params as $param => $value) {
         $statement->bindValue(':' . $param, $value);
       }
 
