@@ -9,7 +9,7 @@
       loadPartial('errors', [
         'errors' => $errors ?? []
       ])
-      ?>
+    ?>
     <form method="POST" action="/auth/register">
       <div class="mb-4">
         <input type="text" name="name" placeholder="Full Name" value="<?= $user['name'] ?? '' ?>"
