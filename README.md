@@ -16,3 +16,5 @@ Users can only access certain routes if they are logged in
 Users can only delete the job listings they own
 ### Search Functionality
 Users can search for specific job listings by name and location
+### Secure Coding Practices
+Routes and inputs have been hardened against injection attacks
