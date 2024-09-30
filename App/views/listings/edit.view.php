@@ -12,11 +12,12 @@
         Job Info
       </h2>
 
-      <?php if(isset($errors)) : ?>
-        <?php foreach($errors as $error) : ?>
-            <div class="message bg-red-100 my-3"><?= $error ?></div>
-        <?php endforeach; ?>
-      <?php endif; ?>
+
+      <?=
+        loadPartial('errors', [
+          'errors' => $errors ?? []
+        ])
+        ?>
 
       <div class="mb-4">
         <input type="text" name="title" placeholder="Job Title" value="<?= $listing['title'] ?? '' ?>"
@@ -24,10 +25,10 @@
       </div>
       <div class="mb-4">
         <textarea name="description" placeholder="Job Description"
-          class="w-full px-4 py-2 border rounded focus:outline-none"><?= $listing['description'] ?? ''?></textarea>
+          class="w-full px-4 py-2 border rounded focus:outline-none"><?= $listing['description'] ?? '' ?></textarea>
       </div>
       <div class="mb-4">
-        <input type="text" name="salary" placeholder="Annual Salary" value="<?= $listing['salary'] ?? ''?>"
+        <input type="text" name="salary" placeholder="Annual Salary" value="<?= $listing['salary'] ?? '' ?>"
           class="w-full px-4 py-2 border rounded focus:outline-none" />
       </div>
       <div class="mb-4">
@@ -54,7 +55,8 @@
           class="w-full px-4 py-2 border rounded focus:outline-none" />
       </div>
       <div class="mb-4">
-        <input type="text" name="city" placeholder="City" value="<?= $listing['city'] ?? '' ?>" class="w-full px-4 py-2 border rounded focus:outline-none" />
+        <input type="text" name="city" placeholder="City" value="<?= $listing['city'] ?? '' ?>"
+          class="w-full px-4 py-2 border rounded focus:outline-none" />
       </div>
       <div class="mb-4">
         <input type="text" name="state" placeholder="State" value="<?= $listing['state'] ?? '' ?>"
@@ -65,8 +67,8 @@
           class="w-full px-4 py-2 border rounded focus:outline-none" />
       </div>
       <div class="mb-4">
-        <input type="email" name="email" placeholder="Email Address For Applications" value="<?= $listing['email'] ?? ''?>"
-          class="w-full px-4 py-2 border rounded focus:outline-none" />
+        <input type="email" name="email" placeholder="Email Address For Applications"
+          value="<?= $listing['email'] ?? '' ?>" class="w-full px-4 py-2 border rounded focus:outline-none" />
       </div>
       <button class="w-full bg-green-500 hover:bg-green-600 text-white px-4 py-2 my-3 rounded focus:outline-none">
         Save
