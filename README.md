@@ -12,3 +12,7 @@ Clone the project and change the following Appache server configurations.
 Users can create accounts and login to create, update, and delete job listings.
 ### Protected Routes (middleware) 
 Users can only access certain routes if they are logged in
+### Edit and Delete Authorization
+Users can only delete the job listings they own
+### Search Functionality
+Users can search for specific job listings by name and location
