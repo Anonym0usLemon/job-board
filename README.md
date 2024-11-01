@@ -6,6 +6,8 @@ A job listing website where users can view job ads, post job ads, and apply for 
 Clone the project and change the following Appache server configurations.
 - Set document root in httpd.conf to ```/project_name/public``` so that Appache looks for the index in the public folder when you go to localhost in the browser. 
 - Set the directory setting in httpd.conf to this value as well.
+- The httpd.conf file with the correct configurations is found in the root of the project folder.
+
 
 ## Features:
 ### Login and Register 
